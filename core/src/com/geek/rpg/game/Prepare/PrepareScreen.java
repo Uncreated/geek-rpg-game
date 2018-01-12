@@ -85,23 +85,19 @@ public class PrepareScreen extends ScreenTemplate
 			}
 		}
 
-		Texture buttonTexture = Assets.getInstance().getTexture("buttonMenu.png");
-
-		skin.add("textureButton", buttonTexture);
-		skin.add("font", font);
-
-		TextButton.TextButtonStyle textButtonStyle = new TextButton.TextButtonStyle();
-		textButtonStyle.up = skin.getDrawable("textureButton");
-		textButtonStyle.font = font;
-		skin.add("tbs", textButtonStyle);
-
-		Button btn = new TextButton("GO BATTLE >", skin, "tbs");
-		btn.setPosition(ScreenManager.WIDTH - 300, 50);
-		stage.addActor(btn);
-		btn.addListener(new ChangeListener()
+		setBackButton(new Runnable()
 		{
 			@Override
-			public void changed(ChangeEvent event, Actor actor)
+			public void run()
+			{
+				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.WORLD_MAP);
+			}
+		});
+
+		setNextButton(new Runnable()
+		{
+			@Override
+			public void run()
 			{
 				if (selectedCount >= 1)
 				{
@@ -115,18 +111,6 @@ public class PrepareScreen extends ScreenTemplate
 
 					ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.SKIRMISH);
 				}
-			}
-		});
-
-		btn = new TextButton("< BACK", skin, "tbs");
-		btn.setPosition(20, 50);
-		stage.addActor(btn);
-		btn.addListener(new ChangeListener()
-		{
-			@Override
-			public void changed(ChangeEvent event, Actor actor)
-			{
-				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.WORLD_MAP);
 			}
 		});
 	}

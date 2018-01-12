@@ -6,8 +6,12 @@ import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 
 public abstract class ScreenTemplate implements Screen
 {
@@ -21,16 +25,41 @@ public abstract class ScreenTemplate implements Screen
 	protected Stage stage;
 	protected Skin skin;
 
+	protected Button backButton;
+	protected Button nextButton;
+
 	public ScreenTemplate(ScreenManager.ScreenType screenType, SpriteBatch batch)
 	{
 		this.screenType = screenType;
 		this.batch = batch;
 	}
 
-	/*public void show(Object... params)
+	public void setBackButton(Runnable runnable)
 	{
-		this.params = params;
-	}*/
+		backButton = initButton("Back", 50, runnable);
+	}
+
+	public void setNextButton(Runnable runnable)
+	{
+		backButton = initButton("Next", Gdx.graphics.getWidth() - 320, runnable);
+	}
+
+	private Button initButton(String text, int x, final Runnable runnable)
+	{
+		Button button = new TextButton(text, skin, "btn");
+		button.setPosition(x, 50);
+		button.addListener(new ChangeListener()
+		{
+			@Override
+			public void changed(ChangeEvent event, Actor actor)
+			{
+				runnable.run();
+			}
+		});
+		stage.addActor(button);
+
+		return button;
+	}
 
 	@Override
 	public void show()
@@ -43,6 +72,13 @@ public abstract class ScreenTemplate implements Screen
 		Gdx.input.setInputProcessor(stage);
 
 		skin = new Skin();
+
+		skin.add("buttonMenu", Assets.getInstance().getTexture("buttonMenu.png"));
+
+		TextButton.TextButtonStyle availableTBS = new TextButton.TextButtonStyle();
+		availableTBS.up = skin.getDrawable("buttonMenu");
+		availableTBS.font = font;
+		skin.add("btn", availableTBS);
 	}
 
 	@Override
@@ -70,7 +106,7 @@ public abstract class ScreenTemplate implements Screen
 
 	protected void doRender()
 	{
-
+		//if(backButton.rea)
 	}
 
 	protected void postRender()

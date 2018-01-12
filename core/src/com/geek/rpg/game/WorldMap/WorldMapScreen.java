@@ -25,6 +25,15 @@ public class WorldMapScreen extends ScreenTemplate
 		super.show();
 		setBackground("backgroundSky.png");
 
+		setBackButton(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.MAIN_MENU);
+			}
+		});
+
 		skin.add("availableLevel", Assets.getInstance().getTexture("flyingIsland.png"));
 		skin.add("unavailableLevel", Assets.getInstance().getTexture("flyingIslandUnavailable.png"));
 		skin.add("font", font);
