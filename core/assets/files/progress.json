@@ -1,0 +1,106 @@
+[
+  {
+    "heroes": [
+      {
+        "id": 1,
+        "level": 9,
+        "exp": 20848
+      },
+      {
+        "id": 2,
+        "level": 7,
+        "exp": 4473
+      },
+      {
+        "id": 3,
+        "level": 7,
+        "exp": 4373
+      },
+      {
+        "id": 4,
+        "level": 7,
+        "exp": 4373
+      }
+    ],
+    "levels": 9,
+    "id": 1
+  },
+  {
+    "heroes": [
+      {
+        "id": 1,
+        "level": 4,
+        "exp": 437
+      },
+      {
+        "id": 2,
+        "level": 1,
+        "exp": 0
+      },
+      {
+        "id": 3,
+        "level": 2,
+        "exp": 262
+      },
+      {
+        "id": 4,
+        "level": 1,
+        "exp": 0
+      }
+    ],
+    "levels": 5,
+    "id": 2
+  },
+  {
+    "heroes": [
+      {
+        "id": 1,
+        "level": 1,
+        "exp": 50
+      },
+      {
+        "id": 2,
+        "level": 1,
+        "exp": 0
+      },
+      {
+        "id": 3,
+        "level": 1,
+        "exp": 0
+      },
+      {
+        "id": 4,
+        "level": 1,
+        "exp": 0
+      }
+    ],
+    "levels": 2,
+    "id": 3
+  },
+  {
+    "heroes": [
+      {
+        "id": 1,
+        "level": 8,
+        "exp": 8435
+      },
+      {
+        "id": 2,
+        "level": 8,
+        "exp": 9311
+      },
+      {
+        "id": 3,
+        "level": 8,
+        "exp": 9682
+      },
+      {
+        "id": 4,
+        "level": 8,
+        "exp": 10583
+      }
+    ],
+    "levels": 8,
+    "id": 4
+  }
+]

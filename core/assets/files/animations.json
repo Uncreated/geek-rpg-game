@@ -1,0 +1,174 @@
+[
+  {
+    "id": 0,
+    "blocking": true
+  },
+  {
+    "id": 2,
+    "frames": 21,
+    "duration": 1.0,
+    "blocking": true,
+    "textureName": "animations/heal.png"
+  },
+  {
+    "id": 3,
+    "frames": 21,
+    "duration": 1.0,
+    "blocking": true,
+    "textureName": "animations/ignition.png"
+  },
+  {
+    "id": 4,
+    "frames": 56,
+    "duration": 1.0,
+    "blocking": true,
+    "textureName": "animations/explosion.png"
+  },
+  {
+    "id": 5,
+    "frames": 5,
+    "duration": 0.5,
+    "blocking": true,
+    "textureName": "animations/swing.png"
+  },
+  {
+    "id": 6,
+    "frames": 26,
+    "duration": 1.0,
+    "blocking": true,
+    "textureName": "animations/fire.png"
+  },
+  {
+    "id": 7,
+    "frames": 6,
+    "duration": 0.5,
+    "blocking": true,
+    "textureName": "animations/holyShock.png"
+  },
+  {
+    "id": 8,
+    "frames": 56,
+    "duration": 1.0,
+    "blocking": true,
+    "textureName": "animations/explosion.png"
+  },
+  {
+    "id": 100,
+    "frames": 8,
+    "duration": 2.0,
+    "textureName": "animations/warrior.png"
+  },
+  {
+    "id": 101,
+    "frames": 5,
+    "duration": 0.7,
+    "blocking": true,
+    "textureName": "animations/attackWarrior.png"
+  },
+  {
+    "id": 102,
+    "duration": 0.5,
+    "blocking": true,
+    "textureName": "animations/spellWarrior.png"
+  },
+  {
+    "id": 103,
+    "frames": 30,
+    "duration": 0.7,
+    "blocking": true,
+    "textureName": "animations/inputDamageWarrior.png"
+  },
+  {
+    "id": 104,
+    "frames": 30,
+    "duration": 0.7,
+    "blocking": true,
+    "textureName": "animations/inputHealWarrior.png"
+  },
+  {
+    "id": 110,
+    "duration": 60.0,
+    "textureName": "animations/deadWarrior.png"
+  },
+  {
+    "id": 200,
+    "frames": 8,
+    "duration": 2.0,
+    "textureName": "animations/skeleton.png"
+  },
+  {
+    "id": 201,
+    "frames": 5,
+    "duration": 0.7,
+    "blocking": true,
+    "textureName": "animations/attackSkeleton.png"
+  },
+  {
+    "id": 202,
+    "duration": 0.5,
+    "blocking": true,
+    "textureName": "animations/spellSkeleton.png"
+  },
+  {
+    "id": 203,
+    "frames": 30,
+    "duration": 0.7,
+    "blocking": true,
+    "textureName": "animations/inputDamageSkeleton.png"
+  },
+  {
+    "id": 204,
+    "frames": 30,
+    "duration": 0.7,
+    "blocking": true,
+    "textureName": "animations/inputHealSkeleton.png"
+  },
+  {
+    "id": 210,
+    "textureName": "animations/deadSkeleton.png"
+  },
+  {
+    "id": 1001,
+    "textureName": "shadow.png"
+  },
+  {
+    "id": 1002,
+    "textureName": "selector.png"
+  },
+  {
+    "id": 1101,
+    "textureName": "abilities/attack.png"
+  },
+  {
+    "id": 1102,
+    "textureName": "abilities/heal.png"
+  },
+  {
+    "id": 1103,
+    "textureName": "abilities/incinerate.png"
+  },
+  {
+    "id": 1104,
+    "textureName": "abilities/lifesteal.png"
+  },
+  {
+    "id": 1105,
+    "textureName": "abilities/defend.png"
+  },
+  {
+    "id": 1106,
+    "textureName": "abilities/healthPotion.png"
+  },
+  {
+    "id": 1107,
+    "textureName": "abilities/manaPotion.png"
+  },
+  {
+    "id": 1108,
+    "textureName": "abilities/incinerate.png"
+  },
+  {
+    "id": 1109,
+    "textureName": "abilities/incinerate.png"
+  }
+]

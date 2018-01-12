@@ -1,0 +1,168 @@
+[
+  {
+    "id": 1,
+    "name": "Warrior",
+    "baseStats": {
+      "stamina": 25,
+      "strength": 20,
+      "agility": 5,
+      "intellect": 0,
+      "armor": 120
+    },
+    "animationId": 100,
+    "abilities": [
+      1,
+      10,
+      11
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Mage",
+    "baseStats": {
+      "stamina": 20,
+      "strength": 0,
+      "agility": 5,
+      "intellect": 30,
+      "armor": 20
+    },
+    "animationId": 100,
+    "abilities": [
+      9,
+      3
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Paladin",
+    "baseStats": {
+      "stamina": 20,
+      "strength": 15,
+      "agility": 0,
+      "intellect": 15,
+      "armor": 120
+    },
+    "animationId": 100,
+    "abilities": [
+      1,
+      2,
+      8
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Priest",
+    "baseStats": {
+      "stamina": 20,
+      "strength": 0,
+      "agility": 5,
+      "intellect": 30,
+      "armor": 20
+    },
+    "animationId": 100,
+    "abilities": [
+      2,
+      8,
+      12
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Skeleton Warrior",
+    "baseStats": {
+      "stamina": 10,
+      "strength": 10,
+      "agility": 3,
+      "intellect": 0,
+      "armor": 60
+    },
+    "animationId": 200,
+    "abilities": [
+      1
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Skeleton Priest",
+    "baseStats": {
+      "stamina": 13,
+      "strength": 0,
+      "agility": 2,
+      "intellect": 13,
+      "armor": 20
+    },
+    "animationId": 200,
+    "abilities": [
+      12,
+      8,
+      2
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Skeleton Warlock",
+    "baseStats": {
+      "stamina": 13,
+      "strength": 0,
+      "agility": 2,
+      "intellect": 13,
+      "armor": 20
+    },
+    "animationId": 200,
+    "abilities": [
+      3,
+      4
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Skeleton Berserk",
+    "baseStats": {
+      "stamina": 5,
+      "strength": 25,
+      "agility": 0,
+      "intellect": 0,
+      "armor": 0
+    },
+    "animationId": 200,
+    "abilities": [
+      10,
+      10,
+      11
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Skeleton Knight",
+    "baseStats": {
+      "stamina": 20,
+      "strength": 20,
+      "agility": 20,
+      "intellect": 0,
+      "armor": 600
+    },
+    "animationId": 200,
+    "abilities": [
+      10,
+      11,
+      1
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Skeleton King of Mages",
+    "baseStats": {
+      "stamina": 40,
+      "strength": 0,
+      "agility": 0,
+      "intellect": 30,
+      "armor": 20
+    },
+    "animationId": 200,
+    "abilities": [
+      8,
+      4,
+      3
+    ]
+  }
+]

@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "Melee Attack",
+    "minLevel": 1,
+    "enemy": true,
+    "targetEffectId": 1,
+    "type":1,
+    "animationId": 1101
+  },
+  {
+    "id": 2,
+    "name": "Heal",
+    "minLevel": 1,
+    "friend": true,
+    "self": true,
+    "cooldown": 1,
+    "cost": 10,
+    "targetEffectId": 2,
+    "type":2,
+    "animationId": 1102
+  },
+  {
+    "id": 3,
+    "name": "Incinerate",
+    "minLevel": 2,
+    "enemy": true,
+    "cooldown": 2,
+    "cost": 20,
+    "targetEffectId": 3,
+    "type":2,
+    "animationId": 1103
+  },
+  {
+    "id": 4,
+    "name": "LifeSteal",
+    "minLevel": 3,
+    "enemy": true,
+    "cooldown": 2,
+    "cost": 30,
+    "targetEffectId": 5,
+    "initiatorEffectId": 6,
+    "type":2,
+    "animationId": 1104
+  },
+  {
+    "id": 5,
+    "name": "Defend",
+    "minLevel": 2,
+    "self": true,
+    "type":2,
+    "animationId": 1105
+  },
+  {
+    "id": 6,
+    "name": "Health Potion",
+    "minLevel": 2,
+    "self": true,
+    "type":5,
+    "animationId": 1106
+  },
+  {
+    "id": 7,
+    "name": "Mana Potion",
+    "minLevel": 2,
+    "self": true,
+    "type":5,
+    "animationId": 1107
+  },
+  {
+    "id": 8,
+    "name": "Holy Shock",
+    "minLevel": 2,
+    "enemy": true,
+    "cooldown": 2,
+    "cost": 30,
+    "targetEffectId": 4,
+    "type":2,
+    "count":5,
+    "animationId": 1108
+  },
+  {
+    "id": 9,
+    "name": "Fireball",
+    "minLevel": 1,
+    "enemy": true,
+    "cooldown": 1,
+    "cost": 10,
+    "targetEffectId": 7,
+    "type":2,
+    "animationId": 1109
+  },
+  {
+    "id": 10,
+    "name": "Cleave",
+    "minLevel": 2,
+    "enemy": true,
+    "cooldown": 3,
+    "targetEffectId": 1,
+    "type":2,
+    "count":3,
+    "animationId": 1101
+  },
+  {
+    "id": 11,
+    "name": "Slam",
+    "minLevel": 3,
+    "enemy": true,
+    "cooldown": 3,
+    "targetEffectId": 8,
+    "type":2,
+    "count":1,
+    "animationId": 1101
+  },
+  {
+    "id": 12,
+    "name": "Mass Heal",
+    "minLevel": 3,
+    "friend": true,
+    "self": true,
+    "cooldown": 3,
+    "cost": 10,
+    "targetEffectId": 9,
+    "type":2,
+    "count":5,
+    "animationId": 1102
+  }
+]

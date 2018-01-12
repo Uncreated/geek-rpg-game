@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "name": "Attack",
+    "incDependencies": {
+      "strength": 2.0
+    },
+    "lowDependencies": {
+      "armor": 0.001
+    },
+    "animationId": 5
+  },
+  {
+    "id": 2,
+    "name": "Restoration",
+    "damaging": false,
+    "incDependencies": {
+      "intellect": 4.0
+    },
+    "animationId": 2
+  },
+  {
+    "id": 3,
+    "name": "Ignition",
+    "damaging": true,
+    "rounds": 5,
+    "instant": false,
+    "incDependencies": {
+      "intellect": 1.0
+    },
+    "animationId": 6
+  },
+  {
+    "id": 4,
+    "name": "Holy Shock",
+    "damaging": true,
+    "rounds": 3,
+    "incDependencies": {
+      "intellect": 0.5
+    },
+    "animationId": 7
+  },
+  {
+    "id": 5,
+    "name": "Drain Life",
+    "damaging": true,
+    "incDependencies": {
+      "intellect": 3
+    },
+    "animationId": 7
+  },
+  {
+    "id": 6,
+    "name": "Drain Life",
+    "damaging": false,
+    "incDependencies": {
+      "intellect": 3
+    },
+    "animationId": 2
+  },
+  {
+    "id": 7,
+    "name": "Fireball",
+    "damaging": true,
+    "incDependencies": {
+      "intellect": 3.0
+    },
+    "animationId": 8
+  },
+  {
+    "id": 8,
+    "name": "Slam",
+    "incDependencies": {
+      "strength": 4.0
+    },
+    "lowDependencies": {
+    },
+    "animationId": 5
+  },
+  {
+    "id": 9,
+    "name": "Restoration",
+    "damaging": false,
+    "incDependencies": {
+      "intellect": 2.0
+    },
+    "animationId": 2
+  }
+]

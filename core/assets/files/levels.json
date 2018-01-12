@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Training",
+    "friendlyCharactersCount": 1,
+    "enemies": [
+      {
+        "id": 101,
+        "level": 1
+      },
+      {
+        "id": 101,
+        "level": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "First battle",
+    "friendlyCharactersCount": 2,
+    "enemies": [
+      {
+        "id": 101,
+        "level": 1
+      },
+      {
+        "id": 101,
+        "level": 1
+      },
+      {
+        "id": 101,
+        "level": 1
+      },
+      {
+        "id": 101,
+        "level": 1
+      },
+      {
+        "id": 101,
+        "level": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Something new",
+    "friendlyCharactersCount": 2,
+    "enemies": [
+      {
+        "id": 104,
+        "level": 2
+      },
+      {
+        "id": 103,
+        "level": 2
+      },
+      {
+        "id": 102,
+        "level": 2
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Melee Power",
+    "friendlyCharactersCount": 3,
+    "enemies": [
+      {
+        "id": 105,
+        "level": 3
+      },
+      {
+        "id": 104,
+        "level": 3
+      },
+      {
+        "id": 104,
+        "level": 3
+      },
+      {
+        "id": 102,
+        "level": 3
+      },
+      {
+        "id": 102,
+        "level": 3
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Magic Power",
+    "friendlyCharactersCount": 3,
+    "enemies": [
+      {
+        "id": 103,
+        "level": 3
+      },
+      {
+        "id": 103,
+        "level": 3
+      },
+      {
+        "id": 103,
+        "level": 3
+      },
+      {
+        "id": 103,
+        "level": 3
+      },
+      {
+        "id": 103,
+        "level": 3
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "So Much Defence",
+    "friendlyCharactersCount": 4,
+    "enemies": [
+      {
+        "id": 105,
+        "level": 7
+      },{
+        "id": 105,
+        "level": 8
+      },{
+        "id": 105,
+        "level": 9
+      },{
+        "id": 105,
+        "level": 10
+      },{
+        "id": 105,
+        "level": 11
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "HARDCOOOOORE",
+    "friendlyCharactersCount": 4,
+    "enemies": [
+      {
+        "id": 104,
+        "level": 9
+      },
+      {
+        "id": 104,
+        "level": 10
+      },
+      {
+        "id": 102,
+        "level": 11
+      },
+      {
+        "id": 106,
+        "level": 12
+      },
+      {
+        "id": 102,
+        "level": 13
+      }
+    ]
+  }
+]
