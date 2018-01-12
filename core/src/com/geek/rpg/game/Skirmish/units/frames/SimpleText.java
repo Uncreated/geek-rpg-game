@@ -7,32 +7,27 @@ import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.utils.Align;
 import com.geek.rpg.game.Assets;
 
-public class SimpleText
+class SimpleText
 {
 	private BitmapFont font;
 	private String text;
 	private Color color;
 
-	public SimpleText()
+	SimpleText()
 	{
 		this("", Color.WHITE);
 	}
 
-	public SimpleText(String text, Color color)
+	SimpleText(String text, Color color)
 	{
 		this.font = Assets.getInstance().getFont("font.fnt");
 		this.text = text;
 		this.color = new Color(color);
 	}
 
-	public void setText(String text)
+	void setText(String text)
 	{
 		this.text = text;
-	}
-
-	public void setColor(Color color)
-	{
-		this.color = color;
 	}
 
 	public void render(SpriteBatch batch, Rectangle rectangle)
@@ -46,7 +41,7 @@ public class SimpleText
 		font.draw(batch, text, x + 1, y + height - 1, width, Align.center, false);
 	}
 
-	public void setA(float a)
+	void setA(float a)
 	{
 		color.a = a;
 	}

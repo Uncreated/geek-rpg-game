@@ -1,5 +1,6 @@
 package com.geek.rpg.game.Skirmish;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
@@ -13,11 +14,17 @@ import com.geek.rpg.game.Skirmish.units.Unit;
 import com.geek.rpg.game.Skirmish.units.frames.AbilityBar;
 import com.geek.rpg.game.primitives.GameObject;
 
-//Только рисует
+import java.util.LinkedList;
+
 public class SkirmishScreen extends ScreenTemplate
 {
 	private SkirmishLogic skirmishLogic;
 	private boolean isEnded;
+
+	private String statisticsTitle;
+
+	private Button menuButton;
+	private LinkedList<Button> menuButtons = new LinkedList<Button>();
 
 	public SkirmishScreen(SpriteBatch batch)
 	{
@@ -29,14 +36,64 @@ public class SkirmishScreen extends ScreenTemplate
 	{
 		isEnded = false;
 		this.skirmishLogic = new SkirmishLogic();
+
 		super.show();
+
+		int x = Gdx.graphics.getWidth() / 2 - 140;
+		int y = Gdx.graphics.getHeight() - 200;
+
+		menuButtons.add(initButton("Continue", x, y, new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				menuButton.setVisible(true);
+				for (Button button : menuButtons)
+					button.setVisible(false);
+			}
+		}));
+
+		y -= 100;
+		menuButtons.add(initButton("Restart", x, y, new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.SKIRMISH);
+			}
+		}));
+
+		y -= 100;
+		menuButtons.add(initButton("Back to World Map", x, y, new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.WORLD_MAP);
+			}
+		}));
+
+		menuButton = initButton("Menu", Gdx.graphics.getWidth() - 320, Gdx.graphics.getHeight() - 130,
+				new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						menuButton.setVisible(false);
+						for (Button button : menuButtons)
+							button.setVisible(true);
+					}
+				});
+
+		for (Button button : menuButtons)
+			button.setVisible(false);
 	}
 
 	@Override
 	public void update(float dt)
 	{
 		super.update(dt);
-		if (!isEnded)
+		if (!isEnded && menuButton.isVisible())
 		{
 			skirmishLogic.update(dt);
 			if (isEnded = skirmishLogic.isEnded())
@@ -46,13 +103,11 @@ public class SkirmishScreen extends ScreenTemplate
 		}
 	}
 
-	String statisticsTitle;
-
 	private void showStatistics()
 	{
 		boolean leftWinner = skirmishLogic.isLeftWinner();
 
-		if(leftWinner)
+		if (leftWinner)
 			App.Selections.getLevel().complete();
 
 		statisticsTitle = leftWinner ? "You are winner! :)" : "You are loser! :(";
@@ -92,7 +147,6 @@ public class SkirmishScreen extends ScreenTemplate
 			@Override
 			public void changed(ChangeEvent event, Actor actor)
 			{
-				//повторить этот уровень ещё раз
 				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.SKIRMISH);
 			}
 		});

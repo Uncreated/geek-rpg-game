@@ -1,6 +1,5 @@
 package com.geek.rpg.game.Skirmish.units.frames;
 
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
@@ -64,10 +63,19 @@ public class InfoBar extends GameObject
 	}
 
 	@Override
+	public void update(float dt)
+	{
+		if (unit.isAlive())
+			super.update(dt);
+		else
+			unit.getSubObjects().remove(this);
+	}
+
+	@Override
 	public void onRender(SpriteBatch batch)
 	{
 		//lvl
-		batch.setColor(0.7f,0.7f,0,1);
+		batch.setColor(0.7f, 0.7f, 0, 1);
 		batch.draw(fillingTexture,
 				lvlRow.getRectangle().x, lvlRow.getRectangle().y,
 				0, 0,
@@ -100,7 +108,7 @@ public class InfoBar extends GameObject
 		}
 	}
 
-	public Vector2 getTop()
+	Vector2 getTop()
 	{
 		return getRectangle().getPosition(new Vector2()).add(WIDTH / 2, getRectangle().height);
 	}

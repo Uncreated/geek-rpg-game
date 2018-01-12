@@ -1,8 +1,6 @@
 package com.geek.rpg.game.Skirmish.units.frames;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Vector2;
-import com.geek.rpg.game.Skirmish.InputHandler;
 import com.geek.rpg.game.Skirmish.units.Unit;
 import com.geek.rpg.game.factory.templates.Ability;
 import com.geek.rpg.game.primitives.GameObject;
@@ -13,13 +11,11 @@ public class AbilityBar extends GameObject
 {
 	private static final float WIDTH = (40.0f + 92.191f) * 2.0f;
 
-	private Unit initiator;
 	private Unit target;
 
 	public AbilityBar(Unit initiator, Unit target)
 	{
-		super(target.getCenter(), WIDTH, WIDTH);
-		this.initiator = initiator;
+		super(target.getCenter(), 0, 0);
 		this.target = target;
 		ArrayList<Ability> abilities = Ability.getSystem().getAvailableAbilities(initiator, target);
 
@@ -42,8 +38,8 @@ public class AbilityBar extends GameObject
 				return;
 	}
 
-	public Unit getTarget()
+	public void dispose()
 	{
-		return target;
+		target.setSelected(false);
 	}
 }

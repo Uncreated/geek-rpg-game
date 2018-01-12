@@ -9,8 +9,7 @@ import java.util.ArrayList;
 
 public class AbilitySystem
 {
-
-	public static boolean canApplySpell(Ability ability, Unit initiator, Unit target)
+	private static boolean canApplySpell(Ability ability, Unit initiator, Unit target)
 	{
 		if (ability.getMinLevel() > initiator.getLevel())
 			return false;

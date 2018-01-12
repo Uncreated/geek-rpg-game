@@ -37,7 +37,7 @@ public class SkirmishLogic
 
 	private float lockTimer = 0;
 
-	public SkirmishLogic()
+	SkirmishLogic()
 	{
 		skirmishLogic = this;
 
@@ -177,7 +177,7 @@ public class SkirmishLogic
 	{
 		if (abilityBar != null)
 		{
-			abilityBar.getTarget().setSelected(false);
+			abilityBar.dispose();
 			abilityBar = null;
 		}
 	}
@@ -187,7 +187,7 @@ public class SkirmishLogic
 		return abilityBar == null ? false : abilityBar.isClick();
 	}
 
-	public AbilityBar getAbilityBar()
+	AbilityBar getAbilityBar()
 	{
 		return abilityBar;
 	}
@@ -197,17 +197,17 @@ public class SkirmishLogic
 		return units;
 	}
 
-	public boolean isEnded()
+	boolean isEnded()
 	{
 		return isEnded;
 	}
 
-	public boolean isLeftWinner()
+	boolean isLeftWinner()
 	{
 		return isTeamAlive(leftTeam);
 	}
 
-	public int getTotalExp()
+	int getTotalExp()
 	{
 		return totalExp;
 	}
@@ -217,7 +217,7 @@ public class SkirmishLogic
 		Unit cur;
 		SequenceNode next;
 
-		public SequenceNode(Team left, Team right)
+		SequenceNode(Team left, Team right)
 		{
 			this.cur = left.getUnit(0);
 			SequenceNode last = this;
@@ -234,7 +234,7 @@ public class SkirmishLogic
 			last.next = this;
 		}
 
-		public SequenceNode getNextAvailable()
+		SequenceNode getNextAvailable()
 		{
 			SequenceNode node = next;
 			while (!node.cur.isAlive())
@@ -244,7 +244,7 @@ public class SkirmishLogic
 			return node;
 		}
 
-		private SequenceNode(Unit cur)
+		SequenceNode(Unit cur)
 		{
 			this.cur = cur;
 		}

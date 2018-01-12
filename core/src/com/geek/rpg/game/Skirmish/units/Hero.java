@@ -6,7 +6,7 @@ import com.geek.rpg.game.factory.templates.ProgressTemplate;
 
 public class Hero extends Unit
 {
-	ProgressTemplate.ProgressHero progressHero;
+	private ProgressTemplate.ProgressHero progressHero;
 
 	public Hero(Vector2 center, ProgressTemplate.ProgressHero progressHero)
 	{
@@ -45,9 +45,8 @@ public class Hero extends Unit
 	@Override
 	public String getInfoText()
 	{
-		return super.getInfoText() + "\n" +
-				((progressHero.isMax() ? ("Max Level") : (
-						"XP:" + progressHero.getCurExp() + "/" + progressHero.getMaxExp()
-								+ " (" + progressHero.getExpPercent() + "%)")));
+		return (progressHero.isMax() ? ("Max Level") : (
+				"XP:" + progressHero.getCurExp() + "/" + progressHero.getMaxExp()
+						/*+ " (" + progressHero.getExpPercent() + "%)"*/));
 	}
 }

@@ -120,7 +120,7 @@ public abstract class Unit extends GameObject
 		addBattleText(effectTemplate, power);
 	}
 
-	public void addBattleText(EffectTemplate effectTemplate, int power)
+	private void addBattleText(EffectTemplate effectTemplate, int power)
 	{
 		for (PrepareBattleText prepareBattleText : prepareList)
 			if (prepareBattleText.isUnited(effectTemplate, power))
@@ -140,7 +140,7 @@ public abstract class Unit extends GameObject
 				ability.setCurCooldown(ability.getCurCooldown() - 1);
 	}
 
-	public void tickEffect(Effect effect)
+	private void tickEffect(Effect effect)
 	{
 		effect.tick();
 		if (effect.isEnded())
@@ -152,7 +152,7 @@ public abstract class Unit extends GameObject
 		return stats;
 	}
 
-	public void addAbilities(Integer... abilitiesId)
+	private void addAbilities(Integer... abilitiesId)
 	{
 		for (Integer id : abilitiesId)
 			abilities.add(new Ability(id));

@@ -7,7 +7,7 @@ import com.geek.rpg.game.factory.templates.Ability;
 import com.geek.rpg.game.primitives.GameObject;
 import com.geek.rpg.game.primitives.Painted;
 
-public class AbilityButton extends GameObject
+class AbilityButton extends GameObject
 {
 	private static final int WIDTH = 80;
 	private static final int HEIGHT = 80;
@@ -17,8 +17,7 @@ public class AbilityButton extends GameObject
 	private Unit initiator;
 	private Unit target;
 
-
-	public AbilityButton(Vector2 center, Ability ability, Unit initiator, Unit target)
+	AbilityButton(Vector2 center, Ability ability, Unit initiator, Unit target)
 	{
 		super(center, WIDTH, HEIGHT, 9);
 

@@ -21,11 +21,11 @@ public class Team
 	{
 		this.left = left;
 		this.units = new ArrayList<Unit>();
-		for (int i = 0; i < cells.length; i++)
+		for (Vector2 cell : cells)
 		{
 			if (left)
-				cells[i].x = -cells[i].x;
-			cells[i].add(center);
+				cell.x = -cell.x;
+			cell.add(center);
 		}
 	}
 
@@ -44,14 +44,6 @@ public class Team
 	public int size()
 	{
 		return units.size();
-	}
-
-	public boolean isAlive()
-	{
-		for (Unit unit : units)
-			if (unit.isAlive())
-				return true;
-		return false;
 	}
 
 	public ArrayList<Unit> getUnits()

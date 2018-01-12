@@ -15,18 +15,14 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 
 public abstract class ScreenTemplate implements Screen
 {
-	//protected Object[] params;
-	protected ScreenManager.ScreenType screenType;
+	private ScreenManager.ScreenType screenType;
+	private Texture background;
+
 	protected SpriteBatch batch;
 	protected BitmapFont font;
 
-	protected Texture background;
-
 	protected Stage stage;
 	protected Skin skin;
-
-	protected Button backButton;
-	protected Button nextButton;
 
 	public ScreenTemplate(ScreenManager.ScreenType screenType, SpriteBatch batch)
 	{
@@ -34,20 +30,20 @@ public abstract class ScreenTemplate implements Screen
 		this.batch = batch;
 	}
 
-	public void setBackButton(Runnable runnable)
+	protected void setBackButton(Runnable runnable)
 	{
-		backButton = initButton("Back", 50, runnable);
+		initButton("Back", 50, 50, runnable);
 	}
 
-	public void setNextButton(Runnable runnable)
+	protected void setNextButton(Runnable runnable)
 	{
-		backButton = initButton("Next", Gdx.graphics.getWidth() - 320, runnable);
+		initButton("Next", Gdx.graphics.getWidth() - 320, 50, runnable);
 	}
 
-	private Button initButton(String text, int x, final Runnable runnable)
+	protected Button initButton(String text, int x, int y, final Runnable runnable)
 	{
 		Button button = new TextButton(text, skin, "btn");
-		button.setPosition(x, 50);
+		button.setPosition(x, y);
 		button.addListener(new ChangeListener()
 		{
 			@Override
@@ -106,10 +102,9 @@ public abstract class ScreenTemplate implements Screen
 
 	protected void doRender()
 	{
-		//if(backButton.rea)
 	}
 
-	protected void postRender()
+	private void postRender()
 	{
 		batch.end();
 		stage.draw();
@@ -142,7 +137,7 @@ public abstract class ScreenTemplate implements Screen
 		Assets.getInstance().clear();
 	}
 
-	public void setBackground(String backgroundName)
+	protected void setBackground(String backgroundName)
 	{
 		this.background = Assets.getInstance().getTexture(backgroundName);
 	}
