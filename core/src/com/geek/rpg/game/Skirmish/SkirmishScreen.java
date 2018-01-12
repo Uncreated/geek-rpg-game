@@ -1,18 +1,17 @@
 package com.geek.rpg.game.Skirmish;
 
-import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.geek.rpg.game.App;
 import com.geek.rpg.game.Assets;
 import com.geek.rpg.game.ScreenManager;
 import com.geek.rpg.game.ScreenTemplate;
 import com.geek.rpg.game.Skirmish.units.Unit;
 import com.geek.rpg.game.Skirmish.units.frames.AbilityBar;
 import com.geek.rpg.game.primitives.GameObject;
-import com.geek.rpg.game.primitives.Painted;
 
 //Только рисует
 public class SkirmishScreen extends ScreenTemplate
@@ -53,6 +52,9 @@ public class SkirmishScreen extends ScreenTemplate
 	{
 		boolean leftWinner = skirmishLogic.isLeftWinner();
 
+		if(leftWinner)
+			App.Selections.getLevel().complete();
+
 		statisticsTitle = leftWinner ? "You are winner! :)" : "You are loser! :(";
 		statisticsTitle += "\n" + "Total experience: " + skirmishLogic.getTotalExp();
 
@@ -91,8 +93,7 @@ public class SkirmishScreen extends ScreenTemplate
 			public void changed(ChangeEvent event, Actor actor)
 			{
 				//повторить этот уровень ещё раз
-
-				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.SKIRMISH, params);
+				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.SKIRMISH);
 			}
 		});
 
@@ -101,7 +102,8 @@ public class SkirmishScreen extends ScreenTemplate
 			@Override
 			public void changed(ChangeEvent event, Actor actor)
 			{
-				//ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.SKIRMISH, params);
+				App.Selections.setLevel(App.Selections.getLevel().getNext());
+				ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.SKIRMISH);
 			}
 		});
 	}

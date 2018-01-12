@@ -16,12 +16,13 @@ public class GameObject
 	protected int layer;
 
 	private Rectangle rectangle;
-	private Vector2 center;
 
 	private GameObject parent;
 	private LinkedList<GameObject> subObjects = new LinkedList<GameObject>();
 
 	private Painted painted;
+
+	private Vector2 tmp = new Vector2();
 
 	public GameObject(Vector2 center, float width, float height)
 	{
@@ -31,7 +32,6 @@ public class GameObject
 	public GameObject(Vector2 center, float width, float height, int layer)
 	{
 		rectangle = new Rectangle().setSize(width, height).setCenter(center);
-		this.center = rectangle.getCenter(new Vector2());
 		this.layer = layer;
 	}
 
@@ -72,7 +72,7 @@ public class GameObject
 
 	public Vector2 getCenter()
 	{
-		return rectangle.getCenter(new Vector2());
+		return rectangle.getCenter(tmp);
 	}
 
 	public Rectangle getRectangle()
@@ -94,7 +94,6 @@ public class GameObject
 	{
 		rectangle.x += vector.x;
 		rectangle.y += vector.y;
-		this.center = rectangle.getCenter(this.center);
 		for (GameObject gameObject : subObjects)
 			gameObject.move(vector);
 	}
@@ -118,7 +117,7 @@ public class GameObject
 	protected void onRender(SpriteBatch batch)
 	{
 		if (painted != null)
-			painted.render(batch, center);
+			painted.render(batch, getCenter());
 	}
 
 	public void addSubObject(GameObject gameObject)

@@ -40,9 +40,14 @@ public class WorldMapScreen extends ScreenTemplate
 		skin.add("utbs", unavailableTBS);
 
 		int maxLevels = App.Selections.getProgressCell().getLevels();
+		Level last = null;
 		for (int i = 1; i <= 7; i++)
 		{
 			final Level level = new Level(i);
+			if (last != null)
+				last.setNext(level);
+
+			last = level;
 			Button btnIsland = new TextButton("\n\nLEVEL " + i + "\n" + level.getName(),
 					skin,
 					(maxLevels >= i) ? "tbs" : "utbs");

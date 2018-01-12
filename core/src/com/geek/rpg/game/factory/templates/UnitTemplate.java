@@ -12,6 +12,7 @@ public class UnitTemplate extends JsonTemplate
 	private UnitStats baseStats;
 	private Integer animationId;
 	private Integer[] abilities;
+	private int unitClass = 0;
 
 	public String getName()
 	{
@@ -31,5 +32,10 @@ public class UnitTemplate extends JsonTemplate
 	public Integer[] getAbilities()
 	{
 		return abilities;
+	}
+
+	public int getUnitClass()
+	{
+		return unitClass;
 	}
 }

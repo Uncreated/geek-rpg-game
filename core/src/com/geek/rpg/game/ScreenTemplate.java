@@ -11,7 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public abstract class ScreenTemplate implements Screen
 {
-	protected Object[] params;
+	//protected Object[] params;
 	protected ScreenManager.ScreenType screenType;
 	protected SpriteBatch batch;
 	protected BitmapFont font;
@@ -27,10 +27,10 @@ public abstract class ScreenTemplate implements Screen
 		this.batch = batch;
 	}
 
-	public void show(Object... params)
+	/*public void show(Object... params)
 	{
 		this.params = params;
-	}
+	}*/
 
 	@Override
 	public void show()

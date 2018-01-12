@@ -14,6 +14,13 @@ import java.util.LinkedList;
 
 public abstract class Unit extends GameObject
 {
+	public static final int WARRIOR = 0;
+	public static final int MAGE = 1;
+	public static final int PALADIN = 2;
+	public static final int PRIEST = 3;
+	public static final int WARLOCK = 4;
+	public static final int ROGUE = 5;
+
 	private static final int UNIT_WIDTH = 90;
 	private static final int UNIT_HEIGHT = 150;
 	private static final int SELECTOR_HEIGHT = 30;
@@ -33,6 +40,7 @@ public abstract class Unit extends GameObject
 	private boolean selected = false;
 
 	private GameObject selector;
+	private InfoBar infoBar;
 
 	public int getLevel()
 	{
@@ -77,7 +85,7 @@ public abstract class Unit extends GameObject
 		shadow.setPainted(new Painted(1001));
 		addSubObject(shadow);
 
-		InfoBar infoBar = new InfoBar(this);
+		infoBar = new InfoBar(this);
 		addSubObject(infoBar);
 
 		addAbilities(template.getAbilities());
@@ -216,6 +224,16 @@ public abstract class Unit extends GameObject
 	public String getInfoText()
 	{
 		return template.getName();
+	}
+
+	public int getUnitClass()
+	{
+		return template.getUnitClass();
+	}
+
+	public InfoBar getInfoBar()
+	{
+		return infoBar;
 	}
 
 	@Override

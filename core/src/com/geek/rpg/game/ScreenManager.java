@@ -58,7 +58,7 @@ public class ScreenManager
 		viewport.apply();
 	}
 
-	public void switchScreen(ScreenType type, Object... params)
+	public void switchScreen(ScreenType type)
 	{
 		Screen screen = app.getScreen();
 		Assets.getInstance().clear();
@@ -81,7 +81,7 @@ public class ScreenManager
 				screenTemplate = skirmishScreen;
 				break;
 		}
-		screenTemplate.show(params);
+		//screenTemplate.show(params);
 		app.setScreen(screenTemplate);
 	}
 

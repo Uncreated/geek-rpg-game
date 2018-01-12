@@ -2,7 +2,6 @@ package com.geek.rpg.game.Skirmish.units.frames;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Vector2;
 import com.geek.rpg.game.Skirmish.units.Unit;
 import com.geek.rpg.game.primitives.GameObject;
 
@@ -18,7 +17,7 @@ public class FlyingText extends GameObject
 
 	public FlyingText(Unit unit, String text, Color color)
 	{
-		super(unit.getRectangle().getCenter(new Vector2()).add(0, unit.getHeight()), WIDTH, HEIGHT, 5);
+		super(unit.getInfoBar().getTop().add(0, HEIGHT / 2), WIDTH, HEIGHT, 5);
 		this.simpleText = new SimpleText(text, color);
 
 		checkCollision(unit);

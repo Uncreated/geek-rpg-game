@@ -24,11 +24,8 @@ public class Assets
 		switch (type)
 		{
 			case SKIRMISH:
-
 				loadTextures("background.png",
-						"selector.png",
-						"healthBar.png",
-						"manaBar.png");
+						"selector.png");
 				break;
 			case WORLD_MAP:
 				loadTextures("backgroundSky.png",

@@ -5,6 +5,7 @@ import com.geek.rpg.game.App;
 public class Level
 {
 	private LevelTemplate template;
+	private Level next;
 
 	public Level(int id)
 	{
@@ -19,6 +20,16 @@ public class Level
 	public String getName()
 	{
 		return template.getName();
+	}
+
+	public Level getNext()
+	{
+		return next;
+	}
+
+	public void setNext(Level next)
+	{
+		this.next = next;
 	}
 
 	public int getFriendlyCharactersCount()

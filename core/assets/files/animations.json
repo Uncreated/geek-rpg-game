@@ -136,6 +136,34 @@
     "textureName": "selector.png"
   },
   {
+    "id": 1003,
+    "textureName": "infoBar/barRow.png"
+  },
+  {
+    "id": 1004,
+    "textureName": "infoBar/warriorBar.png"
+  },
+  {
+    "id": 1005,
+    "textureName": "infoBar/mageBar.png"
+  },
+  {
+    "id": 1006,
+    "textureName": "infoBar/paladinBar.png"
+  },
+  {
+    "id": 1007,
+    "textureName": "infoBar/priestBar.png"
+  },
+  {
+    "id": 1008,
+    "textureName": "infoBar/warlockBar.png"
+  },
+  {
+    "id": 1009,
+    "textureName": "infoBar/rogueBar.png"
+  },
+  {
     "id": 1101,
     "textureName": "abilities/attack.png"
   },

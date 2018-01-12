@@ -14,7 +14,8 @@
       1,
       10,
       11
-    ]
+    ],
+    "unitClass":0
   },
   {
     "id": 2,
@@ -30,7 +31,8 @@
     "abilities": [
       9,
       3
-    ]
+    ],
+    "unitClass":1
   },
   {
     "id": 3,
@@ -47,7 +49,8 @@
       1,
       2,
       8
-    ]
+    ],
+    "unitClass":2
   },
   {
     "id": 4,
@@ -64,11 +67,12 @@
       2,
       8,
       12
-    ]
+    ],
+    "unitClass":3
   },
   {
     "id": 101,
-    "name": "Skeleton Warrior",
+    "name": "Skeleton",
     "baseStats": {
       "stamina": 10,
       "strength": 10,
@@ -79,11 +83,12 @@
     "animationId": 200,
     "abilities": [
       1
-    ]
+    ],
+    "unitClass":0
   },
   {
     "id": 102,
-    "name": "Skeleton Priest",
+    "name": "Skeleton",
     "baseStats": {
       "stamina": 13,
       "strength": 0,
@@ -96,11 +101,12 @@
       12,
       8,
       2
-    ]
+    ],
+    "unitClass":3
   },
   {
     "id": 103,
-    "name": "Skeleton Warlock",
+    "name": "Skeleton",
     "baseStats": {
       "stamina": 13,
       "strength": 0,
@@ -112,11 +118,12 @@
     "abilities": [
       3,
       4
-    ]
+    ],
+    "unitClass":4
   },
   {
     "id": 104,
-    "name": "Skeleton Berserk",
+    "name": "Skeleton",
     "baseStats": {
       "stamina": 5,
       "strength": 25,
@@ -129,11 +136,12 @@
       10,
       10,
       11
-    ]
+    ],
+    "unitClass":5
   },
   {
     "id": 105,
-    "name": "Skeleton Knight",
+    "name": "Skeleton King",
     "baseStats": {
       "stamina": 20,
       "strength": 20,
@@ -146,11 +154,12 @@
       10,
       11,
       1
-    ]
+    ],
+    "unitClass":0
   },
   {
     "id": 106,
-    "name": "Skeleton King of Mages",
+    "name": "Skeleton King",
     "baseStats": {
       "stamina": 40,
       "strength": 0,
@@ -163,6 +172,7 @@
       8,
       4,
       3
-    ]
+    ],
+    "unitClass":1
   }
 ]
